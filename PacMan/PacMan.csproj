@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mapy\bludiste_1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Mapy\bludiste_1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GUI\GUIZdroje.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GUIZdroje.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Mapy\bludiste_1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>bludiste_1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="GUI\GUIZdroje.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GUIZdroje.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Mapy\bludiste_1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>bludiste_1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
